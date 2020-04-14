@@ -1,0 +1,71 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Favicon -->
+    <link rel="icon" href="./temperature.png" sizes="16x16" type="image/png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Internal CSS -->
+    <link rel="stylesheet" href="./styles.css">
+    <title>Weather App</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="./manifest.json">
+
+    <link rel="apple-touch-icon" href="./temperature.png">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="theme-color" content="">
+</head>
+<script type="text/javascript">
+    
+    // Service worker registering
+    if('serviceWorker' in navigator){
+      navigator.serviceWorker.register('./serviceWorker.js')
+        .then(reg => console.log('service worker registered'))
+        .catch(err => console.log('service worker not registered', err));
+    }
+
+</script>
+<body>
+
+    <div class="container my-5 mx-auto">
+        <h1 class="text-muted text-center">Weather App</h1>
+        <form class="change-location my-4 text-center text-muted">
+            <input type="text" name="city" class="form-control p-4" placeholder="Enter city name here">
+            <input type="submit" class="btn btn-dark btn-block mt-3" value="Submit">
+        </form>
+
+        <!-- Weather Card -->
+        <div class="card shadow-lg rounded">
+            <img src="https://via.placeholder.com/400x300" alt="" class="time card-img-top">
+            <div class="icon bg-light mx-auto text-center">
+                <!-- Icon -->
+                <img src="" alt="">
+            </div>
+            <div class="text-muted text-uppercase text-center details">
+                <h5 class="my-3">City name</h5>
+                <div class="my-3">Weather Condition</div>
+                <div class="display-4 my-4">
+                    <span>temp</span>
+                    <span>&deg;C</span>
+                </div>
+            </div>
+        </div>
+
+        <p class="mt-5 text-center">
+            <span class="text-dark">Made with</span> <span class="text-white"><code>&lt;PASSION/&gt;</code></span><br/>
+            <span class="text-dark">By</span> <a class="text-primary" href="https://personal-site-v2.000webhostapp.com">Pushkar Saraf</a>
+        </p>
+
+    </div>
+
+    <script src="./JS/forecast.js"></script>
+    <script src="./JS/app.js"></script>
+</body>
+</html>

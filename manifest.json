@@ -1,0 +1,28 @@
+{
+    "lang" : "en",
+    "name": "Weather App",
+    "short_name": "Weather App",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "description" : "A weather app.",
+    "background_color": "#eeedce",
+    "theme_color": "#eeedce", 
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "./temperature-128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+      },
+      {
+        "src": "./temperature-256.png",
+        "type": "image/png",
+        "sizes": "256x256"
+      }, 
+      {
+        "src": "./temperature.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
